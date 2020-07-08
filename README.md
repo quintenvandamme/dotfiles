@@ -10,7 +10,7 @@
 <h3 align="center">
     <b>Overview</b>
 </h3>
-<p align="center">Just a minimal openbox setup that syncs with my workflow.</p>
+<p align="center"></p>
 
 ***
 ![img](https://github.com/HexaOneOfficial/dotfiles/blob/main/screenshot/desktop.png)
