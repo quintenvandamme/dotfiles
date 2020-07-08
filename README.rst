@@ -1,6 +1,6 @@
 Dotfiles
 =======
-.zshrc whas compiled by the arco linux. `all rights reserved 
+.zshrc whas compiled by arco linux. `all rights reserved 
 <https://arcolinux.com>`_ .
 
 Screenshot
