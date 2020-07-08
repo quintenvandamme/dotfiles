@@ -8,19 +8,20 @@
 <br />
 
 <h3 align="center">
-    <b>Overview</b>
+    <b>Screenshot</b>
 </h3>
 <p align="center"></p>
 
 ***
 ![img](https://github.com/HexaOneOfficial/dotfiles/blob/main/screenshot/desktop.png)
 
+<h3 align="center">
+    <b>.zshrc</b>
+</h3>
+<p align="center"></p>
+
 **.zshrc** `all rights reserved <https://arcolinux.com>`_ .
 
 **theme** `gruvbox <https://store.kde.org/p/1327725/>`_ .
 
-Screenshot
-----------
 
-* .. image:: https://github.com/HexaOneOfficial/dotfiles/blob/main/screenshot/desktop.png
-     :alt: Desktop
