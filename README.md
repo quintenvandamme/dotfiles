@@ -3,7 +3,7 @@
 </p>
 
 <h2 align="center">
-    <b>nuaNce's dotfiles</b> 
+    <b>dotfiles</b> 
     </h2>
 <br />
 
