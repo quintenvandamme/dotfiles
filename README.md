@@ -16,27 +16,33 @@
 ![img](https://github.com/HexaOneOfficial/dotfiles/blob/main/screenshot/desktop.png)
 
 <h3 align="center">
-    <b>.zshrc</b>
+    <b>Used</b>
 </h3>
 <p align="center"></p>
 
-**.zshrc [here](https://arcolinux.com)**
+### Programs:
 
-<h3 align="center">
-    <b>themes</b>
-</h3>
-<p align="center"></p>
+**Window Manager:** KDE
 
-**all [here](https://github.com/bennetthardwick/gruvbox-gtk)**
+**Terminal:** Konsole
+
+**Web Browser:** Firefox
+
+**File Manager:** Nemo
+
+### Themes:
 
 **konsole [here](https://www.pling.com/p/1327725/)**
 
-<h3 align="center">
-    <b>:heart:thanks to:heart:</b>
-</h3>
-<p align="center"></p>
+**gtk [here](https://github.com/bennetthardwick/gruvbox-gtk)**
 
-**colncidence [README.md](https://github.com/co1ncidence)**
+### Shell:
+
+**.zshrc [here](https://arcolinux.com)**
+
+### Readme:
+
+**colncidence [here](https://github.com/co1ncidence)**
 
  
 
