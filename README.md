@@ -20,8 +20,25 @@
 </h3>
 <p align="center"></p>
 
-**.zshrc** `all rights reserved <https://arcolinux.com>`_ .
+**.zshrc [here](https://arcolinux.com)**
 
-**theme** `gruvbox <https://store.kde.org/p/1327725/>`_ .
+<h3 align="center">
+    <b>themes</b>
+</h3>
+<p align="center"></p>
+
+**all [here](https://github.com/bennetthardwick/gruvbox-gtk)**
+
+**konsole [here](https://www.pling.com/p/1327725/)**
+
+<h3 align="center">
+    <b>thanks to</b>
+</h3>
+<p align="center"></p>
+
+**colncidence [README.md](https://github.com/co1ncidence)**
+
+ 
+
 
 
