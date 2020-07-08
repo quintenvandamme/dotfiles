@@ -32,7 +32,7 @@
 **konsole [here](https://www.pling.com/p/1327725/)**
 
 <h3 align="center">
-    <b>thanks to</b>
+    <b>:heart:thanks to:heart:</b>
 </h3>
 <p align="center"></p>
 
