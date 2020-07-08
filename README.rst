@@ -7,5 +7,5 @@ Screenshot
 ----------
 
 
-* .. image:: https://github.com/HexaOneOfficial/dotfiles/blob/master/screenshot/desktop.png
+* .. image:: https://github.com/HexaOneOfficial/dotfiles/blob/main/screenshot/desktop.png
      :alt: Desktop
