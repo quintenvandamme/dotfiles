@@ -13,7 +13,7 @@
 <p align="center"></p>
 
 ***
-![img](https://cdn.discordapp.com/attachments/635625917623828520/776848268406816798/unknown.png)
+![img](screenshot/desktop.png)
 
 <h3 align="center">
     <b>Used</b>
