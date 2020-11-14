@@ -13,7 +13,7 @@
 <p align="center"></p>
 
 ***
-![img](https://github.com/HexaOneOfficial/dotfiles/blob/main/screenshot/desktop.png)
+![img](https://cdn.discordapp.com/attachments/635625917623828520/776848268406816798/unknown.png)
 
 <h3 align="center">
     <b>Used</b>
@@ -22,27 +22,14 @@
 
 ### Programs:
 
-**Window Manager:** KDE
+**Window Manager:** i3
 
-**Terminal:** Konsole
+**Terminal:** Gnome-terminal
 
 **Web Browser:** Firefox
 
-**File Manager:** Nemo
+**File Manager:** Gnome-files
 
-### Themes:
-
-**konsole [here](https://www.pling.com/p/1327725/)**
-
-**gtk [here](https://github.com/bennetthardwick/gruvbox-gtk)**
-
-### Shell:
-
-**.zshrc [here](https://arcolinux.com)**
-
-### Readme:
-
-**colncidence [here](https://github.com/co1ncidence)**
 
  
 
