@@ -189,10 +189,12 @@ mode "$mode_system" {
 bindsym $mode+Pause mode "$mode_system"
 
 exec --no-startup-id xset dpms 300
-
-bindsym XF86AudioMute exec "pamixer --toggle-mute && killall -USR1 i3status"
-bindsym XF86AudioRaiseVolume exec "pamixer --increase 5 --allow-boost && killall -USR1 i3status"
-bindsym XF86AudioLowerVolume exec "pamixer --decrease 5 --allow-boost && killall -USR1 i3status"
+# Volume up
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+# Volume down
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
+# Mute volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 
 #bindsym $mod+< move workspace to output left
 #bindsym $mod+> move workspace to output right
@@ -205,11 +207,11 @@ for_window [class="^.*"] border pixel 1
 new_window 1pixel
 
 # display wallpaper
-exec_always feh --bg-scale /home/quinten/.config/i3/wallpaper/1.jpg
+exec_always feh --bg-scale /home/quinten/.config/i3/wallpaper/dark/1.jpg
 
 # run compton
 exec_always compton --config ~/.config/compton.conf
-exec_always --no-startup-id $HOME/.config/compton/launch.sh
+exec_always "compton &"
 
 # screen
 bindsym XF86MonBrightnessUp exec light -A 5; 
