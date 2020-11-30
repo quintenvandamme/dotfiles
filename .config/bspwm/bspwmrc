@@ -2,7 +2,7 @@
 
 sxhkd &
 $HOME/.config/polybar/launch.sh
-$HOME/.config/picom/picom.conf
+$HOME/.config/picom.conf
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
