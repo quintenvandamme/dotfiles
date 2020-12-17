@@ -22,7 +22,7 @@
 
 ### Programs:
 
-**Window Manager:** i3
+**Window Manager:** bspwm
 
 **Terminal:** Gnome-terminal
 
