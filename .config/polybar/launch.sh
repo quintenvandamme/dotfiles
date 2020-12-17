@@ -12,5 +12,18 @@ polybar bar2 >>/tmp/polybar1.log 2>&1 & disow
 polybar bar3 >>/tmp/polybar1.log 2>&1 & disow
 polybar bar4 >>/tmp/polybar1.log 2>&1 & disow
 polybar bar5 >>/tmp/polybar1.log 2>&1 & disow
+polybar bar6 >>/tmp/polybar1.log 2>&1 & disow
 
-echo "Bars launched..."
+rm /tmp/polybar1.log /tmp/polybar2.log
+
+
+LOG=/tmp/polybar1.log 
+if test -f "$LOG"; then
+    echo "$LOG is removed."
+fi
+
+LOG1=/tmp/polybar2.log 
+if test -f "$LOG1"; then
+    echo "$LOG1 is removed."
+fi
+

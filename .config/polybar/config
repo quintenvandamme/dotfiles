@@ -19,7 +19,7 @@
 [colors]
 ;background = ${xrdb:color0:#222}
 background = #171421
-background-alt = #01FFFFFF
+background-alt = #171421FF
 ;foreground = ${xrdb:color7:#222}
 foreground = #FFFFFF
 foreground-alt = #80FFFFFF
@@ -28,7 +28,12 @@ secondary = #e60053
 alert = #bd2c40
 
 [radius]
-radius = 6.0
+radius = 7.0
+
+[font]
+font1 = fixed:pixelsize=8;1
+font2 = unifont:fontformat=truetype:size=8:antialias=false;0
+font3 = siji:pixelsize=8;1
 
 [bar/bar1]
 width = 14.21%
@@ -53,14 +58,11 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=8;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=8;1
+font-0 = ${font.font1}
+font-1 = ${font.font2}
+font-2 = ${font.font3}
 
 modules-left = bspwm
-;modules-center = date
-;modules-right = pulseaudio separator xbacklight xkeyboard memory battery powermenu
-
 ;tray-position = right
 tray-padding = 2
 ;tray-background = #990063ff
@@ -91,17 +93,12 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=8;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=8;1
+font-0 = ${font.font1}
+font-1 = ${font.font2}
+font-2 = ${font.font3}
 
-;modules-left = bspwm
 modules-center = date
-;modules-right = pulseaudio separator xbacklight xkeyboard memory battery powermenu
-
-;tray-position = right
 tray-padding = 2
-;tray-background = #990063ff
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -109,7 +106,7 @@ cursor-scroll = ns-resize
 [bar/bar3]
 width = 15%
 height = 27
-offset-x = 75.15%
+offset-x = 70.95%
 offset-y = 0.2%
 radius = ${radius.radius}
 fixed-center = true
@@ -129,22 +126,54 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=8;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=8;1
+font-0 = ${font.font1}
+font-1 = ${font.font2}
+font-2 = ${font.font3}
 
-;modules-left = bspwm
 modules-center = temperature memory cpu battery
-;modules-right = pulseaudio separator xbacklight xkeyboard memory battery powermenu
 
-;tray-position = right
 tray-padding = 2
-;tray-background = #990063ff
 
 cursor-click = pointer
 cursor-scroll = ns-resize
 
 [bar/bar4]
+width = 4.5%
+height = 27
+offset-x = 85.7%
+
+offset-y = 0.2%
+radius = ${radius.radius}
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 0
+line-color = #f00
+
+border-size = 4
+border-color = #00000000
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = ${font.font1}
+font-1 = ${font.font2}
+font-2 = ${font.font3}
+font-3 = Weather Icons:size=12;0
+
+modules-center = weather
+tray-padding = 2
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+
+[bar/bar5]
 width = 7%
 height = 27
 offset-x = 90%
@@ -167,22 +196,17 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=8;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=8;1
+font-0 = ${font.font1}
+font-1 = ${font.font2}
+font-2 = ${font.font3}
 
-;modules-left = bspwm
 modules-center = kernel
-;modules-right = pulseaudio separator xbacklight xkeyboard memory battery powermenu
-
-;tray-position = right
 tray-padding = 2
-;tray-background = #990063ff
 
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-[bar/bar5]
+[bar/bar6]
 width = 3%
 height = 27
 offset-x = 96.8%
@@ -205,15 +229,22 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=8;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=8;1
+font-0 = ${font.font1}
+font-1 = ${font.font2}
+font-2 = ${font.font3}
 
 modules-center = powermenu
 tray-padding = 2
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+[module/weather]
+type = custom/script
+exec = /home/quinten/.config/polybar-forecast/polybar-forecast-linux-x86_64
+exec-if = ping openweathermap.org -c 1
+interval = 600
+label-font = 3
 
 [module/kernel]
 type = custom/script
@@ -255,7 +286,7 @@ label-unmounted-foreground = ${colors.background-alt}
 type = internal/bspwm
 
 label-focused = %index%
-label-focused-background = ${colors.background-alt}
+label-focused-background = #2f2940
 label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 
@@ -458,13 +489,13 @@ animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 
 animation-charging-foreground = ${colors.foreground-alt}
-animation-charging-framerate = 750
+animation-charging-framerate = 1
 
 animation-discharging-0 = 
 animation-discharging-1 = 
 animation-discharging-2 = 
 animation-discharging-foreground = ${colors.foreground-alt}
-animation-discharging-framerate = 750
+animation-discharging-framerate = 1
 
 [module/temperature]
 type = internal/temperature
