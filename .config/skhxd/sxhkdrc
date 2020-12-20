@@ -4,8 +4,7 @@
 
 # terminal emulator
 super + Return
-	gnome-terminal
-
+	termite
 # program launcher
 super + d
 	rofi -show drun -theme suro
@@ -22,7 +21,7 @@ super + alt + {q,r}
 	bspc {quit,wm -r}
 
 # close and kill
-super + {_,shift + }w
+super + q
 	bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
@@ -119,3 +118,8 @@ super + alt + shift + {h,j,k,l}
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
+#Brightness control
+XF86MonBrightnessDown
+	xbacklight -dec 5
+XF86MonBrightnessUp
+	xbacklight -inc 5
