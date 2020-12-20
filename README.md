@@ -24,11 +24,11 @@
 
 **Window Manager:** bspwm
 
-**Terminal:** Gnome-terminal
+**Terminal:** Termite
 
-**Web Browser:** Firefox
+**Web Browser:** Chromium (flatpak)
 
-**File Manager:** Gnome-files
+**File Manager:** Nemo
 
 
  
