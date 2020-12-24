@@ -1,11 +1,13 @@
 * {
-  background-color: #171421;
-  border-color: #171421;
+  background-color: #1b1b1b;
+  border-color: #1b1b1b;
   text-color: #FFFFFF;
-  spacing: 0;
+  spacing: 0;  
   width: 200px;
   height: 150px;
+  font: "SF Pro Display 10";
 }
+
 
 inputbar {
   border: 0 0 1px 0;
@@ -40,5 +42,5 @@ element {
 }
 
 element selected {
-  background-color: #2e343f;
+  background-color: #1E1E1E;
 }
