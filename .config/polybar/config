@@ -18,7 +18,7 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #242428
+background = #1b1b1b
 background-alt = #171421FF
 ;foreground = ${xrdb:color7:#222}
 foreground = #FFFFFF
@@ -110,9 +110,9 @@ cursor-click = pointer
 cursor-scroll = ns-resize
 
 [bar/bar3]
-width = 14%
+width = 5%
 height = 27
-offset-x = 71.95%
+offset-x = 80.95%
 offset-y = 0.2%
 radius = ${radius.radius}
 fixed-center = true
@@ -136,9 +136,9 @@ module-margin-right = 2
 font-0 = SF Pro Display:pixelsize=8;1
 font-1 = ${font.font2}
 font-2 = ${font.font3}
-font-3 = "Material Icons:style=Regular:size=9;3"	
+font-3 = "Iosevka Nerd Font:size=10;4"
 
-modules-center = temperature memory cpu battery
+modules-center = wlan battery
 
 tray-padding = 2
 
@@ -244,7 +244,7 @@ cursor-scroll = ns-resize
 
 [module/weather]
 type = custom/script
-exec = /home/quinten/.config/polybar-forecast/polybar-forecast-linux-x86_64
+exec = /home/quinten/.config/polybar-forecast/polybar-forecast-linux-x86_64 
 exec-if = ping openweathermap.org -c 1
 interval = 600
 label-font = 3
@@ -255,41 +255,11 @@ exec = uname -r
 tail = false
 interval = 1024
 
-[module/xwindow]
-type = internal/xwindow
-label = %title:0:30:...%
-
-[module/xkeyboard]
-type = internal/xkeyboard
-blacklist-0 = num lock
-
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.secondary}
-
-label-layout = %layout%
-label-layout-underline = ${colors.secondary}
-
-label-indicator-padding = 2
-label-indicator-margin = 1
-label-indicator-background = ${colors.secondary}
-label-indicator-underline = ${colors.secondary}
-
-[module/filesystem]
-type = internal/fs
-interval = 25
-
-mount-0 = /
-
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
-label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.background-alt}
-
 [module/bspwm]
 type = internal/bspwm
 
 label-focused = %index%
-label-focused-background = #404049
+label-focused-background = #1E1E1E
 label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 
@@ -306,19 +276,6 @@ label-empty-padding = 2
 
 ; Separator in between workspaces
 ; label-separator = |
-
-[module/mpd]
-type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
-
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-
-label-song-maxlen = 25
-label-song-ellipsis = true
 
 [module/xbacklight]
 type = internal/xbacklight
@@ -365,7 +322,8 @@ interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
 format-connected-underline = #9f78e1
-label-connected = %essid%
+;label-connected = %essid%
+label-connected = 
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -373,11 +331,11 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
+ramp-signal-0 = 直
+ramp-signal-1 = 直
+ramp-signal-2 = 直
+ramp-signal-3 = 直
+ramp-signal-4 = 直
 ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
@@ -467,38 +425,36 @@ bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
+
 [module/battery]
 type = internal/battery
+
+full-at = 99
+
 battery = BAT1
 adapter = ACAD
-full-at = 98
 
-format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
+poll-interval = 2
+time-format = %H:%M
 
-format-discharging = <animation-discharging> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
+format-charging = <animation-charging>
+format-discharging = <ramp-capacity>
 
-format-full-prefix = " "
-format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
+label-full = ﮤ
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-foreground = ${colors.foreground-alt}
-animation-charging-framerate = 1
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
 
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
-animation-discharging-foreground = ${colors.foreground-alt}
-animation-discharging-framerate = 1
+animation-charging-framerate = 750
 
 [module/temperature]
 type = internal/temperature
