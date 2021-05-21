@@ -1,0 +1,6 @@
+[Default Applications]
+x-scheme-handler/tg=userapp-Telegram Desktop-KASKZ0.desktop
+x-scheme-handler/figma=figma-linux.desktop
+
+[Added Associations]
+x-scheme-handler/tg=userapp-Telegram Desktop-KASKZ0.desktop;

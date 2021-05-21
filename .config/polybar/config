@@ -18,7 +18,8 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #1b1b1b
+background = #000000
+;background = #1b1b1b
 background-alt = #171421FF
 ;foreground = ${xrdb:color7:#222}
 foreground = #FFFFFF
@@ -28,7 +29,7 @@ secondary = #e60053
 alert = #bd2c40
 
 [radius]
-radius = 7.0
+;radius = 7.0
 
 [font]
 font1 = fixed:pixelsize=8;1
@@ -36,10 +37,10 @@ font2 = unifont:fontformat=truetype:size=8:antialias=false;0
 font3 = siji:pixelsize=8;1
 
 [bar/bar1]
-width = 11.5%
+width = 100%
 height = 27
-offset-x = 0.2%
-offset-y = 0.2%
+;offset-x = 0.2%
+;offset-y = 0.2%
 radius = ${radius.radius}
 fixed-center = true
 
@@ -49,7 +50,7 @@ foreground = ${colors.foreground}
 line-size = 0
 line-color = #f00
 
-border-size = 4
+border-size = 0 
 border-color = #00000000
 
 padding-left = 0
@@ -58,13 +59,15 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = SF Pro Display:pixelsize=8;1
+font-0 = JetBrains Mono:pixelsize=8;1
 
 #font-0 = ${font.font1}
 #font-1 = ${font.font2}
 #font-2 = ${font.font3}
 
 modules-left = bspwm
+modules-center = date
+modules-right = wlan weather kernel TYPEBAT1
 ;tray-position = right
 tray-padding = 2
 ;tray-background = #990063ff
@@ -72,175 +75,6 @@ tray-padding = 2
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-[bar/bar2]
-width = 4%
-height = 27
-offset-x = 48.2%
-offset-y = 0.2%
-radius = ${radius.radius}
-fixed-center = true
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 0
-line-color = #f00
-
-border-size = 4
-border-color = #00000000
-
-padding-left = 0
-padding-right = 2
-
-module-margin-left = 1
-module-margin-right = 2
-
-
-font-0 = SF Pro Display:pixelsize=8;1
-
-#font-0 = ${font.font1}
-#font-1 = ${font.font2}
-#font-2 = ${font.font3}
-
-
-modules-center = date
-tray-padding = 2
-
-cursor-click = pointer
-cursor-scroll = ns-resize
-
-[bar/bar3]
-width = 5%
-height = 27
-offset-x = 80.95%
-offset-y = 0.2%
-radius = ${radius.radius}
-fixed-center = true
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 0
-line-color = #f00
-
-border-size = 4
-border-color = #00000000
-
-padding-left = 0
-padding-right = 2
-
-module-margin-left = 1
-module-margin-right = 2
-
-
-font-0 = SF Pro Display:pixelsize=8;1
-font-1 = ${font.font2}
-font-2 = ${font.font3}
-font-3 = "Iosevka Nerd Font:size=10;4"
-
-modules-center = wlan battery
-
-tray-padding = 2
-
-cursor-click = pointer
-cursor-scroll = ns-resize
-
-[bar/bar4]
-width = 4.5%
-height = 27
-offset-x = 85.7%
-
-offset-y = 0.2%
-radius = ${radius.radius}
-fixed-center = true
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 0
-line-color = #f00
-
-border-size = 4
-border-color = #00000000
-
-padding-left = 0
-padding-right = 2
-
-module-margin-left = 1
-module-margin-right = 2
-
-font-0 = SF Pro Display:pixelsize=8;1
-
-modules-center = weather
-tray-padding = 2
-
-cursor-click = pointer
-cursor-scroll = ns-resize
-
-
-[bar/bar5]
-width = 7%
-height = 27
-offset-x = 90%
-offset-y = 0.2%
-radius = ${radius.radius}
-fixed-center = true
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 0
-line-color = #f00
-
-border-size = 4
-border-color = #00000000
-
-padding-left = 0
-padding-right = 2
-
-module-margin-left = 1
-module-margin-right = 2
-
-font-0 = SF Pro Display:pixelsize=8;1
-
-modules-center = kernel
-tray-padding = 2
-
-cursor-click = pointer
-cursor-scroll = ns-resize
-
-[bar/bar6]
-width = 3%
-height = 27
-offset-x = 96.8%
-offset-y = 0.2%
-radius = ${radius.radius}
-fixed-center = true
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 0
-line-color = #f00
-
-border-size = 4
-border-color = #00000000
-
-padding-left = 0
-padding-right = 2
-
-module-margin-left = 1
-module-margin-right = 2
-
-font-0 = ${font.font1}
-font-1 = ${font.font2}
-font-2 = ${font.font3}
-
-modules-center = powermenu
-tray-padding = 2
-
-cursor-click = pointer
-cursor-scroll = ns-resize
 
 [module/weather]
 type = custom/script
@@ -254,6 +88,12 @@ type = custom/script
 exec = uname -r
 tail = false
 interval = 1024
+
+[module/TYPEBAT1]
+type = custom/script
+exec = /home/quinten/.config/TYPEBAT/bat.sh
+tail = false
+interval = 10
 
 [module/bspwm]
 type = internal/bspwm
@@ -322,8 +162,8 @@ interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
 format-connected-underline = #9f78e1
-;label-connected = %essid%
-label-connected = 
+label-connected = Telenet
+;label-connected = 
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -331,11 +171,11 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = 直
-ramp-signal-1 = 直
-ramp-signal-2 = 直
-ramp-signal-3 = 直
-ramp-signal-4 = 直
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
 ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
@@ -370,91 +210,27 @@ format-underline = #0a6cf5
 
 label = %date% %time%
 
-[module/pulseaudio]
-type = internal/pulseaudio
-
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
-label-volume-foreground = ${root.foreground}
-
-label-muted = 🔇 muted
-label-muted-foreground = #666
-
-bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
-
-[module/alsa]
-type = internal/alsa
-
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL
-label-volume-foreground = ${root.foreground}
-
-format-muted-prefix = " "
-format-muted-foreground = ${colors.foreground-alt}
-label-muted = sound muted
-
-bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
-
-
 [module/battery]
 type = internal/battery
 
+; This is useful in case the battery never reports 100% charge
 full-at = 99
 
+; Use the following command to list batteries and adapters:
+; $ ls -1 /sys/class/power_supply/
 battery = BAT1
 adapter = ACAD
 
-poll-interval = 2
-time-format = %H:%M
-
-format-charging = <animation-charging>
-format-discharging = <ramp-capacity>
-
-label-full = ﮤ
-
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
-
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
-
-animation-charging-framerate = 750
+; If an inotify event haven't been reported in this many
+; seconds, manually poll for new values.
+;
+; Needed as a fallback for systems that don't report events
+; on sysfs/procfs.
+;
+; Disable polling by setting the interval to 0.
+;
+; Default: 5
+poll-interval = 5
 
 [module/temperature]
 type = internal/temperature

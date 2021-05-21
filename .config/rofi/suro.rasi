@@ -1,11 +1,10 @@
 * {
-  background-color: #1b1b1b;
-  border-color: #1b1b1b;
+  background-color: #000000;
   text-color: #FFFFFF;
   spacing: 0;  
-  width: 200px;
-  height: 150px;
-  font: "SF Pro Display 10";
+  width: 300px;
+  height: 260px;
+  font: "JetBrains Mono 10";
 }
 
 
@@ -21,8 +20,8 @@ prompt {
 
 textbox {
   background-color: #2e343f;
-  border: 0 0 1px 0;
-  border-color: #282C33;
+  border: 0 0 10px 0;
+  border-color: #3F8BF6;
   padding: 8px 16px;
 }
 
@@ -42,5 +41,5 @@ element {
 }
 
 element selected {
-  background-color: #1E1E1E;
+  background-color: #212121;
 }
