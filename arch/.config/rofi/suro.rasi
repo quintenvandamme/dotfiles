@@ -41,5 +41,5 @@ element {
 }
 
 element selected {
-  background-color: #212121;
+  background-color: #70212121;
 }
